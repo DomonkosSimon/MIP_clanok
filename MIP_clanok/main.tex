@@ -1,0 +1,111 @@
+% Metódy inžinierskej práce
+
+\documentclass[10pt,twoside,slovak,a4paper]{article}
+
+\usepackage[slovak]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} % príkaz \url na formátovanie URL
+\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{booktabs}
+
+\usepackage{cite}
+%\usepackage{times}
+
+\pagestyle{headings}
+
+\title{Užitočnosť virtuálnej reality vo vysokoškolskom vzdelávaní so zameraním na štúdium medicíny.\title{Semestrálny projekt v predmete Metódy inžinierskej práce, ak. rok 2020/21, vedenie: Jozef Sitarčík }} % meno a priezvisko vyučujúceho na cvičeniach
+
+\author{Šimon Domonkoš\\[2pt]
+	{\small Slovenská technická univerzita v Bratislave}\\
+	{\small Fakulta informatiky a informačných technológií}\\
+	{\small \texttt{xdomonkos@stuba.sk}}
+	}
+
+\date{\small 6. November 2020} % upravte
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+V tomto článku sa budem podrobne zaoberať využitím virtuálnej reality pri štúdiu medicíny na vysokej škole. Zameriam sa na výhody a nevýhody tejto technológie ako aj odozvu študentov na pokusy o implementáciu tejto technológie do výučbového plánu. 
+
+Virtuálna realita je prevratnou technológiou, ktorej využiteľnosť je v dnešnej dobe veľmi široká. Otvára nové možnosti v oblasti vedy a výskumu, v praktickej medicíne ale aj technologickom priemysle. Jej prínos do medicíny je najmarkantnejší v oblasti výučby kde si študenti môžu vyskúšať reálne podmienky. Študenti chirurgie sa môžu učiť pracovať pod tlakom, v časovej tiesni a s nasimulovanými prekážkami, ktoré sa počas operácie môžu reálne vyskytnúť. Pri virtuálnej realite sú možnosti takmer nekonečné. Podmienky sa dajú simulovať na úroveň veľmi blízku realite s rozdielom, že študenti nemôžu svojou nevedomosťou alebo nedostatkom praxe ohroziť kohokoľvek život (aspoň nie v realite).
+\end{abstract}
+
+
+
+\section{Úvod}
+
+V mnohých filmoch, či seriáloch môžeme vidieť chirurgov ako si pred veľmi náročnou operáciou simulujú operáciu s okuliarmi, ktoré podporujú virtuálnu realitu  a prípadne ovladačmi. Využitie virtuálnej reality v medicíne môže napomôcť k znižovaniu chybovosti najmä pri operáciách. Tréning vo VR môže byť až na toľko reálny, že je na nerozoznanie od skutočnosti a preto môže byť ideálnym výučbovým prostriedkom na simuláciu reálnych podmienok v danej situácií. V časti ~\ref{vyuzitie} sa venujem využitiu VR v rôznych odvetviach medicíny a to konkrétne pri KPR ~\ref{KPR} a v chirurgií ~\ref{chirurgia}. Odozve študentov na implementáciu VR do výučbového plánu sa venujem v časti ~\ref{implementacia}. Výhodám a nevýhodám sa venujem v ~\ref{vyhody}. a ~\ref{nevyhody}. časti. Celkové zhodnotenie a záver je v časti \ref{zaver}.
+
+
+
+
+\section{Využitie VR v odvetviach medicíny} \label{vyuzitie}
+
+\subsection{Kardiopulmonálna resuscitácia} \label{KPR}
+
+Tredičný tréning KPR \footnote{Kardiopulmonálna resuscitácia} neumožňuje študentom správne pochopiť akou silou a frekvenciou ju majú vykonávať a do akej hĺbky je potrebné ísť. Pri náhlej zástave srdca sa môžu poškodiť mozgové bunky a už po 4-6 minútach bez kyslíka umierajú. Ak tzv. mozgová hypoxia \footnote{Nedostatok kyslíka v mozgových bunkách} trvá dlhšie ako 10 minút, poškodenie je nezvratné. Z tohto dôvodu je riadna znalosť techník KPR nevyhnutnosťou pre budúcich medikov. KPR zahŕňa umelé dýchanie a stláčanie hrudníka. Stlačenie hrudníka umožňuje, aby krv prúdila smerom k mozgu
+a tým zabezpečuje nepretržitý prísun kyslíka do mozgu a predchádza poškodeniu mozgu. Hypoxia sa tak môže oddialiť a úmrtnosť sa môže znížiť o 25\% až 30\%. \cite{9130697}
+
+Talianska rada pre resuscitáciu vydala vzdelávací systém VR CPR v septembri 2018. Monitorovacie zariadenie je umiestnené na rukách študenta. Údaje o pohyboch ruky sú zobrazené na okuliaroch. Môžu sa zobraziť tipy týkajúce sa sily a frekvencie na zlepšenie efektívnosti tréningu. LISSA je vzdelávací systém KPR v trojrozmernom (3D) virtuálnom prostredí. Systém je možné používať na smartfónoch a tabletoch. Študent si musí najskôr zvoliť automatický externý defibrilátor (AED) alebo CABD (kompresia-dýchacie cesty-dýchanie-defibrilácia). Ak si študent vyberie nesprávnu možnosť, jeho skóre sa zníži. Pri vykonávaní KPR a AED musí študent ovládať ruky na obrazovke a dať ich do správnej polohy. Obrazovka tiež zobrazuje tipy týkajúce sa frekvencie kompresie, keď študent vykonáva kompresiu. Tento systém však nedokáže presne zistiť hĺbku a silu kompresie študenta. Niektoré nejasnosti vykresľovania pohybu v hre môžu tiež spôsobiť u študentov zmätok. \cite{9130697}
+
+MircoSim je proces KPR vyvinutý spoločnosťou Laerdal Medical Co., Ltd. Pomocou počítača je naprogramovaných niekoľko núdzových scenárov a simulácií užívania drog. Študenti si precvičujú rôzne metódy AED, CPR a kompresie hrudníka. Tento systém je voľne konfigurovateľný a je možné ho upraviť tak, aby vyhovoval rôznym potrebám študentov. Učitelia môžu tiež
+sledovať pokrok každého študenta prostredníctvom informácií zdieľaných automatickým systémom. Vďaka tomu je tréning efektívnejší. Tento systém je však k dispozícii iba na počítačoch. Študenti teda nemôžu trénovať sami. \cite{9130697}
+
+\subsection{Chirurgia} \label{chirurgia}
+
+Chirurgický systém da Vinci od spoločnosti Intuitive Surgical používa trojrozmerné (3D) kamery s vysokým rozlíšením, ktoré umožňujú lekárom na diaľku vykonávať jemné a citlivé operácie a manipulovať s malými chirurgickými nástrojmi. Pri vývoji systému sa spoločnosť zamerala na to, aby poskytla chirurgom lepšie videnie, pretože dotyk potrebný na operáciu mäkkých tkanív, ako sú orgány, bol nad možnosti haptickej technológie. Školenie o tom, ako používať chirurgický systém da Vinci, sa často vykonáva pomocou virtuálnej reality, ktorá umožňuje používateľom precvičiť si používanie systému pred vykonaním skutočných operácií. Pri výcviku vo virtuálnej realite aj pri skutočných operáciách sa technológia haptickej spätnej väzby zlepšuje. \cite{7156262}
+
+Talianska spoločnosť SOFAR (Miláno, Taliansko) uviedla na trh Telelap ALF-X s haptickou spätnou väzbou, ktorá umožňuje chirurgovi nepriamo „ohmatať“ tkanivá, s ktorými manipuluje. Systém tiež sleduje pohyby očí chirurga a umiestňuje kameru tak, aby bolo zorné pole vycentrované tam, kam sa oči pozerajú. \cite{7156262}
+
+Ďalšou technológiou vyvinutou pre hranie hier, ktorá sľubuje revolúciu v lekárskom vzdelávaní, je ponorná virtuálna realita. To je technológia, kde má užívateľ pocit, akoby sa fyzicky nachádzal v situácii, pohyboval sa okolo a manipuloval s virtuálnym svetom. Donedávna bol tento typ technológie drahý a vyvíjal sa iba v dobre financovaných výskumných laboratóriách, ale Oculus Rift to zmenil. Surgevry je spoločnosť, ktorá bola založená špeciálne na používanie Oculus Rift na výcvik chirurgov. Chirurgovia sa zvyčajne učia sledovaním kolegov a následným vykonaním operácie pod vedením staršieho kolegu, ale sledovanie niekoho iného vám neposkytuje rovnakú perspektívu ako skutočné vykonávanie operácie. Surgevry sa teda rozhodlo pripojiť stereoskopické kamery k chirurgovi a natočiť operáciu z jeho pohľadu. Tieto údaje potom prezerá cvičiaci chirurg pomocou náhlavnej súpravy Oculus Rift. Systém je možné použiť aj na vizualizáciu ďalších informácií, ako sú napríklad vyšetrenia MR. \cite{7156262}
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htbp]
+  \centering
+  \caption{Demografické údaje účastníkov v skupinách pre virtuálnu realitu a konvenčné skupiny (n = 169) \cite{6826194}}
+    \begin{tabular}{|r|l|r|r|l|l|}
+    \toprule
+    \multicolumn{1}{|r}{} &       & \multicolumn{1}{l|}{n  } & \multicolumn{1}{l|}{\%} & SD    &  p-value  \\
+    \midrule
+    \multicolumn{1}{|l|}{Groups } & Virtual reality  & 57    & 34    & 17.2   & 0.37 \\
+          & Conventional method & 112   & 66    & 15.8  & - \\
+    \midrule
+    \multicolumn{1}{|l|}{Gender } & Male   & 119   & 70    & -     & - \\
+          & Female & 50    & 30    & -     & - \\
+    \midrule
+    \multicolumn{1}{|l|}{Streams } & Stream 1   & 119   & 73    & -     & - \\
+          & Stream 2 & 43    & 27    & -     & - \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:demografia}%
+\end{table}%
+
+
+
+\section{Odozva študentov na implementáciu VR do výučbového procesu} \label{Odozva}
+
+\ref{tab:demografia}
+
+
+\section{Výhody VR} \label{vyhody}
+
+
+\section{Nevýhody VR} \label{nevyhody}
+
+
+\section{Záver} \label{zaver} % prípadne iný variant názvu
+
+
+
+\bibliography{references.bib}
+\bibliographystyle{plain}
+\end{document}
